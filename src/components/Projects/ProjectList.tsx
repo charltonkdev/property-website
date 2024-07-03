@@ -10,15 +10,15 @@ const ProjectList = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   useEffect(() => {
-    const category = searchParams.get('category');
-    if (category) {
-      setActiveTab(category);
+    const tab = searchParams.get('tab');
+    if (tab) {
+      setActiveTab(tab);
     }
   }, [searchParams]);
 
-  const handleTabClick = (category) => {
-    router.push(`/projects?category=${category}`);
-    setActiveTab(category);
+  const handleTabClick = (tab) => {
+    router.push(`/projects?category=${tab}`);
+    setActiveTab(tab);
   };
 
   const filteredProjects = activeTab === 'all'
