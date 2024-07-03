@@ -5,7 +5,7 @@ import ProjectList from "@/components/Projects/ProjectList";
 
 export default function Projects() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between relative">
+        <main className="flex flex-col items-center justify-between relative">
             <ProjectHero />
             <Suspense fallback={<div>Loading...</div>}>
                 <ProjectList />

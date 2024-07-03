@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation'; // Updated import
+import { useSearchParams, useRouter } from 'next/navigation';
+import { GoArrowUpRight } from "react-icons/go";
 import { projects } from '../../data/projects';
 import Link from 'next/link';
 
@@ -59,19 +60,24 @@ const ProjectList = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {filteredProjects.map(project => (
-          <div key={project.id} className={`${project.boxsize} project-card border rounded-lg h-full relative`}>
+          <div key={project.id} className={`${project.boxsize} project-card border rounded-lg h-full relative group`}>
             <Link href={`/projects/${project.id}`}>
-              <a className="linkContainer">
+              <div className="linkContainer">
                 <img src={project.image} alt={project.title} className="projImg w-full h-[calc(50vw)] md:h-[calc(25vw)] object-cover rounded-lg" />
-                <div className="projectMeta">
-                  <h3 className="mt-2 text-xl font-bold text-white">{project.title}</h3>
-                  <p className="mt-1 text-white">{project.description}</p>
-                  <span className="viewBtn mt-2 inline-block border px-5 py-2 rounded-full">
-                    <p>View Details</p>
-                    <span className="btnbg" />
-                  </span>
+                <div className="projectMeta h-full flex items-end justify-between gap-2 duration-300">
+                  <div className="flex flex-col">
+                    <h3 className="mt-2 text-2xl font-bold text-white">{project.title}</h3>
+                    {/*<p className="mt-1 text-white">{project.description}</p>*/}
+                    <div className="viewBtn flex flex-col translate-y-100 group-hover:translate-y-0 duration-300 justify-between w-fit overflow-hidden">
+                      <p>View Details</p>
+                      <span className="btnLine" />
+                    </div>
+                  </div>
+                  <GoArrowUpRight
+                    className="text-white text-5xl group-hover:text-7xl duration-500 border rounded-full p-3 group-hover:bg-white group-hover:text-black duration-500"
+                  />
                 </div>
-              </a>
+              </div>
             </Link>
           </div>
         ))}

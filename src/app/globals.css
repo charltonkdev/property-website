@@ -16,12 +16,12 @@ p {
 }
 
 .tab-active {
-  @apply bg-blue-500 text-white;
+  @apply bg-slate-600 text-white;
 }
 
 .projectMeta {
   @apply absolute bottom-0 px-12 py-6 w-full;
-
+  
 }
 .project-card {
   transition: .5s ease-in-out;
@@ -29,13 +29,13 @@ p {
   position: relative;
   padding: 10px;
 }
-.project-card:hover .linkContainer{
+.project-card:hover{
   padding: 0;
 }
 .linkContainer {  
-  padding: 10px;
   overflow: hidden;
   display: flex;
+  justify-content: end;
   height: 100%;
   transition: .3s ease-in-out;
   border-radius: 10px;
@@ -48,40 +48,23 @@ p {
 .project-card:hover .projImg {
   filter: saturate(5);
   scale: 1.2;
-  
 }
-.viewBtn {
-  position: relative;
-  overflow: hidden;
-  z-index: 999;
-}
-.project-card:hover .viewBtn p {
-  color: #0D0221;
-}
-.viewBtn p {
+
+.viewBtn p{
   position: relative;
   z-index: 999;
   color: #fff;
   transition: .6s ease-in-out;
+  display: flex;
 }
-.btnbg {
-  background: #D9F280;
-  width: 500px;
-  height: 500px;
+.btnLine {
+  width: 100%;
+  background: white;
+  height: 2px;
   display: block;
-  position: absolute;
-  left: calc(-10vw);
-  top:calc(-25vh);
-  transition: .6s ease-in-out;
-  z-index: 1;
-  scale: 0;
-  border-radius: 100%;
-  transform: translateX(100%);
-  opacity: 0;
+  transform: translateX(-100%);
+  transition: .5s ease-in-out
 }
-.project-card:hover .btnbg {
-  scale: 1;
+.project-card:hover .btnLine {
   transform: translateX(0);
-  transform-origin: bottom right;
-  opacity: 1;
 }
