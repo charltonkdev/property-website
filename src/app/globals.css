@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  font-family: 'Rubik', sans-serif;
+}
+
+.tabs {
+  @apply flex items-center w-full justify-center;
+}
+
+/*projects page*/
+.tab {
+  @apply px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md mr-4 duration-500;
+}
+
+.tab-active {
+  @apply bg-blue-500 text-white;
+}
+
+.projectMeta {
+  @apply absolute bottom-0 px-12 py-6 w-full;
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(70, 37, 117, 0) 100%);
+
+}
+.project-card {
+  transition: .5s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card img.projImg {
+  filter: saturate(1);
+  transition: .3s ease-in-out;
+}
+
+.project-card:hover img.projImg {
+  filter: saturate(5);
+  
+}
+.viewBtn {
+  position: relative;
+  overflow: hidden;
+  z-index: 999;
+}
+.project-card:hover .viewBtn p {
+  color: #0D0221;
+}
+.viewBtn p {
+  position: relative;
+  z-index: 999;
+  color: #fff;
+  transition: .3s ease-in-out;
+}
+.btnbg {
+  background: #D9F280;
+  width: 500px;
+  height: 500px;
+  display: block;
+  position: absolute;
+  left: calc(-10vw);
+  top:calc(-25vh);
+  transition: .3s ease-in-out;
+  z-index: 1;
+  scale: 0;
+  border-radius: 100%;
+}
+.project-card:hover .btnbg {
+  scale: 1;
+}
