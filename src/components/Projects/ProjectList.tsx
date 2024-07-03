@@ -56,7 +56,7 @@ const ProjectList = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {filteredProjects.map(project => (
-          <div key={project.id} className="project-card border rounded-lg h-full relative">
+          <div key={project.id} className={`${project.boxsize} project-card border rounded-lg h-full relative`}>
             <Link className="linkContainer" href={`/projects/${project.id}`}>
               <img src={project.image} alt={project.title} className="projImg w-full h-[calc(50vw)] md:h-[calc(25vw)] object-cover rounded-lg" />
               <div className="projectMeta">

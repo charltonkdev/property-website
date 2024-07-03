@@ -30,7 +30,7 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project01.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="#projects" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/projects?category=current" className="w-fit px-5 py-2 border rounded-full hover">
                     View Current Projets
                 </a>
             </div>
@@ -51,7 +51,7 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project02.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="#projects" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/projects?category=upcoming" className="w-fit px-5 py-2 border rounded-full hover">
                     View Upcoming Projets
                 </a>
             </div>
@@ -94,7 +94,7 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project03.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="#projects" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/projects?category=past" className="w-fit px-5 py-2 border rounded-full hover">
                     View Past Projets
                 </a>
             </div>

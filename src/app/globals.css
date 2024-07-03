@@ -51,7 +51,7 @@ p {
   position: relative;
   z-index: 999;
   color: #fff;
-  transition: .3s ease-in-out;
+  transition: .6s ease-in-out;
 }
 .btnbg {
   background: #D9F280;
@@ -61,11 +61,16 @@ p {
   position: absolute;
   left: calc(-10vw);
   top:calc(-25vh);
-  transition: .3s ease-in-out;
+  transition: .6s ease-in-out;
   z-index: 1;
   scale: 0;
   border-radius: 100%;
+  transform: translateX(100%);
+  opacity: 0;
 }
 .project-card:hover .btnbg {
   scale: 1;
+  transform: translateX(0);
+  transform-origin: bottom right;
+  opacity: 1;
 }
