@@ -4,19 +4,21 @@ import { useSearchParams, useRouter } from 'next/navigation'; // Updated import
 import { projects } from '../../data/projects';
 import Link from 'next/link';
 
+type Tab = 'all' | 'current' | 'upcoming' | 'past';
+
 const ProjectList = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState<Tab>('all');
 
   useEffect(() => {
-    const tab = searchParams.get('tab');
+    const tab = searchParams.get('tab') as Tab | null;
     if (tab) {
       setActiveTab(tab);
     }
   }, [searchParams]);
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab: Tab) => {
     router.push(`/projects?category=${tab}`);
     setActiveTab(tab);
   };
@@ -28,18 +30,21 @@ const ProjectList = () => {
   return (
     <div className="container mx-auto p-4 mb-24">
       <div className="tabs">
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           className={`tab ${activeTab === 'all' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('all')}
         >
           All
         </button>
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           className={`tab ${activeTab === 'current' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('current')}
         >
           Current
         </button>
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           className={`tab ${activeTab === 'upcoming' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('upcoming')}
