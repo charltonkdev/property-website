@@ -1,0 +1,31 @@
+.navigation a {
+  font-weight: bold;
+  overflow: hidden;
+  color: gray;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+.navigation a:hover {
+  color: #2d2d2d;
+}
+.navigation a:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: relative;
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+.navigation a:hover::after {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media (max-width: 1024px){
+    .navigation {
+        display: none;
+    }
+}
