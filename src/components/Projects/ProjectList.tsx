@@ -26,7 +26,7 @@ const ProjectList = () => {
     : projects.filter(project => project.category === activeTab);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 mb-24">
       <div className="tabs">
         <button
           className={`tab ${activeTab === 'all' ? 'tab-active' : ''}`}
@@ -46,6 +46,7 @@ const ProjectList = () => {
         >
           Upcoming
         </button>
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           className={`tab ${activeTab === 'past' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('past')}
@@ -64,7 +65,7 @@ const ProjectList = () => {
                 <p className="mt-1 text-white">{project.description}</p>
                 <span className="viewBtn mt-2 inline-block border px-5 py-2 rounded-full">
                   <p>View Details</p>
-                  <span className="btnbg"></span>
+                  <span className="btnbg" />
                 </span>
               </div>
             </Link>

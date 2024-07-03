@@ -21,22 +21,33 @@ p {
 
 .projectMeta {
   @apply absolute bottom-0 px-12 py-6 w-full;
-  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(70, 37, 117, 0) 100%);
 
 }
 .project-card {
   transition: .5s ease-in-out;
   overflow: hidden;
   position: relative;
+  padding: 10px;
 }
-
-.project-card img.projImg {
+.project-card:hover .linkContainer{
+  padding: 0;
+}
+.linkContainer {  
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  transition: .3s ease-in-out;
+  border-radius: 10px;
+}
+.project-card .projImg {
   filter: saturate(1);
   transition: .3s ease-in-out;
 }
 
-.project-card:hover img.projImg {
+.project-card:hover .projImg {
   filter: saturate(5);
+  scale: 1.2;
   
 }
 .viewBtn {

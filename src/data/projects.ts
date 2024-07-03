@@ -20,7 +20,7 @@ export const projects = [
     description: 'Description of upcoming project 1',
     projectdetails: lorem.generateParagraphs(3),
     image: '/list02.jpg',
-    boxsize: 'col-span-2',
+    boxsize: 'md:col-span-2',
     /*slug: slugify('Current Project 2')*/
   },
   {
@@ -30,7 +30,7 @@ export const projects = [
     description: 'Description of past project 1',
     projectdetails: lorem.generateParagraphs(3),
     image: '/list03.jpg',
-    boxsize: 'col-span-2',
+    boxsize: 'md:col-span-2',
     /*slug: slugify('Current Project 3')*/
   },
   {
@@ -58,7 +58,7 @@ export const projects = [
     description: 'Description of past project 6',
     projectdetails: lorem.generateParagraphs(3),
     image: '/list06.jpg',
-    boxsize: 'col-span-2',
+    boxsize: 'md:col-span-2',
     /*slug: slugify('Current Project 6')*/
   },
   {
@@ -95,7 +95,7 @@ export const projects = [
     description: 'Description of past project 10',
     projectdetails: lorem.generateParagraphs(3),
     image: '/list10.jpg',
-    boxsize: 'col-span-2',
+    boxsize: 'md:col-span-2',
     /*slug: slugify('Current Project 10')*/
   },
   {
