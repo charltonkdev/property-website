@@ -30,7 +30,7 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project01.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="/projects?category=current" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/projects?category=current" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     View Current Projets
                 </a>
             </div>
@@ -51,7 +51,7 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project02.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="/projects?category=upcoming" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/projects?category=upcoming" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     View Upcoming Projets
                 </a>
             </div>
@@ -94,7 +94,7 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project03.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="/projects?category=past" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/projects?category=past" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     View Past Projets
                 </a>
             </div>
@@ -102,7 +102,7 @@ export const InfoGrid = () => {
             {/*fourth row grid*/}
             <div className="flex flex-col border col-span-2 justify-end p-16 border-black h-[calc(50vw)] lg:h-[calc(25vw)] hover:bg-sky-800 duration-500 hover:text-white">
                 <h3 className="uppercase font-bold text-8xl md:text-[10vw] leading-[1.2em]">
-                    About
+                    <a href="/about">About</a>
                 </h3>
                 <p className="text-3xl font-bold uppercase">
                     Our Values & Purpose
@@ -129,7 +129,7 @@ export const InfoGrid = () => {
                     <>
                         <span className='font-bold'>Email:</span> contact@randomemail.com</>
                 </div>
-                <a href="#contact" className="w-fit px-5 py-2 border rounded-full hover">
+                <a href="/contact" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     Get In Touch
                 </a>
             </div>

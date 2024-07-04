@@ -19,7 +19,7 @@ const useFetchPosts = (url: string, limit: number, interval = 60000) => {
       setPosts(response.data);
       setLoading(false);
     } catch (err) {
-      setError(err);
+      setError(err as Error);
       setLoading(false);
     }
   };
