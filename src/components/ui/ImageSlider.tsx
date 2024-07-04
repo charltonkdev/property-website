@@ -1,13 +1,14 @@
-'use client'
-import { useState, useEffect } from 'react';
+'use client';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { images } from './data/image'; // Ensure this path is correct
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const nextSlideRef = useRef<() => void>();
 
-  const nextSlide = () => {
+  nextSlideRef.current = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
@@ -16,8 +17,12 @@ const ImageSlider = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval); 
+    const interval = setInterval(() => {
+      if (nextSlideRef.current) {
+        nextSlideRef.current();
+      }
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -25,6 +30,7 @@ const ImageSlider = () => {
       <div className="relative w-full h-full flex items-center justify-center">
         {images.map((image, index) => (
           <motion.div
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentIndex ? 1 : 0 }}
@@ -34,7 +40,7 @@ const ImageSlider = () => {
             <Image
               src={image.url}
               alt={image.alt}
-              layout="fill"
+              fill
               objectFit="cover"
               className="w-full h-full"
             />
@@ -42,13 +48,15 @@ const ImageSlider = () => {
         ))}
       </div>
       <button
+        type="button"
         onClick={prevSlide}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 text-white"
       >
         &#10094;
       </button>
       <button
-        onClick={nextSlide}
+        type="button"
+        onClick={() => nextSlideRef.current?.()}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-white"
       >
         &#10095;
