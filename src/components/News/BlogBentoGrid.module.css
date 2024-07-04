@@ -1,0 +1,40 @@
+/* components/BlogBentoGrid.module.css */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover img{
+    transform: scale(1.06);
+  }
+  
+  .image {
+    width: 100%;
+    object-fit: full;
+    transition: transform .3s;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    margin: 16px;
+    text-transform: capitalize;
+    background-color: #fff;
+  }
+  
+  .excerpt {
+    font-size: 12px;
+    margin: 0 16px 16px;
+    color: #555;
+  }
+  
