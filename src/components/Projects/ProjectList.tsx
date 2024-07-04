@@ -74,7 +74,7 @@ const ProjectList = () => {
                     </div>
                   </div>
                   <GoArrowUpRight
-                    className="text-white text-5xl group-hover:text-7xl duration-500 border rounded-full p-3 group-hover:bg-white group-hover:text-black duration-500"
+                    className="text-white text-5xl group-hover:text-7xl border rounded-full p-3 group-hover:bg-white group-hover:text-black duration-500"
                   />
                 </div>
               </div>
