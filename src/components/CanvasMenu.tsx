@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import styles from './CanvasMenu.module.css';
-import { CiMenuBurger, CiMenuFries } from "react-icons/ci";
+import { BiMenu, BiMenuAltRight  } from "react-icons/bi";;
 import Image from 'next/image';
 
 export const CanvasMenu = () => {
@@ -18,7 +18,7 @@ export const CanvasMenu = () => {
         onClick={toggleMenu}
         className="lg:hidden p-2 text-black"
       >
-        <CiMenuBurger className='text-4xl' />
+        <BiMenu className='text-4xl' />
       </button>
       <div className={`${styles.canvasMenu} ${isOpen ? styles.open : ''}`}>
         <button
@@ -26,7 +26,7 @@ export const CanvasMenu = () => {
           onClick={toggleMenu}
           className="absolute top-4 right-4 text-blackk"
         >
-          <CiMenuFries className='text-4xl' />
+          <BiMenuAltRight className='text-4xl' />
         </button>
         <div className="flex flex-col items-start py-5 px-6 gap-5 h-full text-5xl uppercase">
           <h1 className="font-semibold text-2xl pb-12 uppercase">Property Estate</h1>
