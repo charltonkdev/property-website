@@ -115,7 +115,7 @@ export const InfoGrid = () => {
                 <h3 className="uppercase font-bold text-3xl">
                     CONTACT US
                 </h3>
-                <div className="flex flex-col text-xl md:text-2xl group-hover:opacity-100 md:opacity-0 duration-300 flex-grow py-6">
+                <div className="flex flex-col text-xl group-hover:opacity-100 md:opacity-0 duration-300 flex-grow py-6">
                     <>
                         <span className='font-bold'>
                             Address:
