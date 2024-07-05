@@ -35,7 +35,7 @@ export const InfoGrid = () => {
                 </a>
             </div>
             <div className="relative flex flex-col justify-center border p-10 hover:p-2 duration-500 border-black h-[calc(100vw)] lg:h-[calc(25vw)] group overflow-hidden">
-                <h3 className="uppercase font-bold text-8xl md:text-[5vw] h-full flex flex-col justify-center leading-[1.2em] duration-500 group-hover:bg-lime-800 group-hover:p-10 group-hover:text-white">
+                <h3 className="uppercase font-bold text-7xl md:text-[5vw] h-full flex flex-col justify-center leading-[1.2em] duration-500 group-hover:bg-lime-800 group-hover:p-10 group-hover:text-white">
                     Quality.<br />
                     Trust.<br />
                     Value.
@@ -100,8 +100,8 @@ export const InfoGrid = () => {
             </div>
 
             {/*fourth row grid*/}
-            <div className="flex flex-col border col-span-2 justify-end p-16 border-black h-[calc(50vw)] lg:h-[calc(25vw)] hover:bg-sky-800 duration-500 hover:text-white">
-                <h3 className="uppercase font-bold text-8xl md:text-[10vw] leading-[1.2em]">
+            <div className="flex flex-col border col-span-2 justify-end p-16 border-black h-[calc(100vw)] lg:h-[calc(25vw)] hover:bg-sky-800 duration-500 hover:text-white">
+                <h3 className="uppercase font-bold text-7xl md:text-[10vw] leading-[1.2em]">
                     <a href="/about">About</a>
                 </h3>
                 <p className="text-3xl font-bold uppercase">
@@ -111,7 +111,7 @@ export const InfoGrid = () => {
             <div className="relative flex flex-col border justify-center items-center p-16 border-black h-[calc(100vw)] lg:h-[calc(25vw)] hover:p-2 duration-500 group">
                 <div className="w-full bg-[url(/property02.jpg)] bg-no-repeat bg-center h-full bg-full" />
             </div>
-            <div className="relative flex flex-col border p-12 border-black h-[calc(100vw)] lg:h-[calc(25vw)]  group">
+            <div className="relative flex flex-col border p-12 border-black h-[calc(110vw)] lg:h-[calc(25vw)]  group">
                 <h3 className="uppercase font-bold text-3xl">
                     CONTACT US
                 </h3>

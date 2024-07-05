@@ -21,7 +21,7 @@ const ProjectList = () => {
   }, [searchParams]);
 
   const handleTabClick = (tab: Tab) => {
-    router.push(`/projects?tab=${tab}`); // Adjust to match query parameter
+    router.push(`/projects/#projectlist?tab=${tab}`); // Adjust to match query parameter
     setActiveTab(tab);
   };
 
@@ -33,24 +33,28 @@ const ProjectList = () => {
     <div className="container mx-auto p-4 mb-24">
       <div className="tabs">
         <button
+          type='button'
           className={`tab ${activeTab === 'all' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('all')}
         >
           All
         </button>
         <button
+          type='button'
           className={`tab ${activeTab === 'current' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('current')}
         >
           Current
         </button>
         <button
+          type='button'
           className={`tab ${activeTab === 'upcoming' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('upcoming')}
         >
           Upcoming
         </button>
         <button
+          type='button'
           className={`tab ${activeTab === 'past' ? 'tab-active' : ''}`}
           onClick={() => handleTabClick('past')}
         >
@@ -58,7 +62,7 @@ const ProjectList = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div id="projectlist" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {filteredProjects.map(project => (
           <div key={project.id} className={`${project.boxsize} project-card border rounded-lg h-full relative group`}>
             <Link href={`/projects/${project.id}`}>
@@ -66,7 +70,7 @@ const ProjectList = () => {
                 <img src={project.image} alt={project.title} className="projImg w-full h-[calc(50vw)] md:h-[calc(25vw)] object-cover rounded-lg" />
                 <div className="projectMeta h-full flex items-end justify-between gap-2 duration-300">
                   <div className="flex flex-col">
-                    <h3 className="mt-2 text-2xl font-bold text-white">{project.title}</h3>
+                    <h3 className="mt-2 text-xl md:text-2xl font-bold text-white">{project.title}</h3>
                     {/*<p className="mt-1 text-white">{project.description}</p>*/}
                     <div className="viewBtn flex flex-col translate-y-100 group-hover:translate-y-0 duration-300 justify-between w-fit overflow-hidden">
                       <p>View Details</p>
