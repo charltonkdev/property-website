@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageSlider from '../ui/ImageSlider';
 import Image from 'next/image';
+import { TransitionLink } from '../utils/TransitionLink';
 
 export const InfoGrid = () => {
     return (
@@ -30,9 +31,9 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project01.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="/projects?category=current" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
+                <TransitionLink href="/projects?category=current" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     View Current Projets
-                </a>
+                </TransitionLink>
             </div>
             <div className="relative flex flex-col justify-center border p-10 hover:p-2 duration-500 border-black h-[calc(100vw)] lg:h-[calc(25vw)] group overflow-hidden">
                 <h3 className="uppercase font-bold text-7xl md:text-[5vw] h-full flex flex-col justify-center leading-[1.2em] duration-500 group-hover:bg-lime-800 group-hover:p-10 group-hover:text-white">
@@ -51,9 +52,9 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project02.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="/projects?category=upcoming" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
+                <TransitionLink href="/projects?category=upcoming" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     View Upcoming Projets
-                </a>
+                </TransitionLink>
             </div>
             <div className="relative flex flex-col border justify-center items-center p-12 border-black h-[calc(100vw)] lg:h-[calc(25vw)] hover:bg-lime-100 group">
                 <div className="scale-100 group-hover:scale-0 group-hover:opacity-0 duration-500">
@@ -94,9 +95,9 @@ export const InfoGrid = () => {
                     <Image alt="project" src="/project03.jpg" width={500} height={300}
                         className='translate-y-full scale-0 group-hover:translate-y-0 group-hover:scale-100 duration-500' />
                 </div>
-                <a href="/projects?category=past" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
+                <TransitionLink href="/projects?category=past" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     View Past Projets
-                </a>
+                </TransitionLink>
             </div>
 
             {/*fourth row grid*/}
@@ -129,9 +130,9 @@ export const InfoGrid = () => {
                     <>
                         <span className='font-bold'>Email:</span> contact@randomemail.com</>
                 </div>
-                <a href="/contact" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
+                <TransitionLink href="/contact" className="w-fit px-5 py-2 border rounded-full hover:bg-black hover:text-white duration-300">
                     Get In Touch
-                </a>
+                </TransitionLink>
             </div>
 
         </div>

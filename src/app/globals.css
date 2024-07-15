@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+  overflow-x: hidden;
+}
+.page-transition {
+  opacity: 0;
+  background: #f7f7f7;
+  transform: translateY(40px);
+  filter: blur(12px);
+}
 
 p {
   font-family: 'Rubik', sans-serif;

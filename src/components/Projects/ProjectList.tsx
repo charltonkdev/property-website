@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { GoArrowUpRight } from "react-icons/go";
 import { projects } from '../../data/projects';
-import Link from 'next/link';
+import { TransitionLink } from '../utils/TransitionLink';
 
 type Tab = 'all' | 'current' | 'upcoming' | 'past';
 
@@ -65,7 +65,7 @@ const ProjectList = () => {
       <div id="projectlist" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {filteredProjects.map(project => (
           <div key={project.id} className={`${project.boxsize} project-card border rounded-lg h-full relative group`}>
-            <Link href={`/projects/${project.id}`}>
+            <TransitionLink href={`/projects/${project.id}`}>
               <div className="linkContainer">
                 <img src={project.image} alt={project.title} className="projImg w-full h-[calc(50vw)] md:h-[calc(25vw)] object-cover rounded-lg" />
                 <div className="projectMeta h-full flex items-end justify-between gap-2 duration-300">
@@ -82,7 +82,7 @@ const ProjectList = () => {
                   />
                 </div>
               </div>
-            </Link>
+            </TransitionLink>
           </div>
         ))}
       </div>

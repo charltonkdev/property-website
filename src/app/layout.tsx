@@ -4,7 +4,6 @@ import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import Footer from '@/components/Footer';
-import Layout from '@/components/Layout';
 
 const spaceGrotest = Space_Grotesk({ subsets: ['latin'] });
 
@@ -22,9 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spaceGrotest.className}`}>
         <Header />
-        <Layout>
           {children}
-        </Layout>
         <Footer />
       </body>
     </html>
